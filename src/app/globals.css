@@ -45,3 +45,72 @@
     padding: 0 6rem;
   }
 }
+
+@layer utilities {
+  /* DESTKOP FONTS */
+  .destkop-h1 {
+    @apply font-poppins font-bold text-3xl leading-[44px];
+  }
+
+  .destkop-h2 {
+    @apply font-poppins font-bold text-2xl leading-7;
+  }
+
+  .destkop-h3 {
+    @apply font-poppins font-bold text-xl leading-6;
+  }
+
+  .destkop-lg {
+    @apply font-inter text-xl leading-[30px];
+  }
+
+  .destkop-md {
+    @apply font-inter text-base leading-6;
+  }
+
+  .destkop-sm {
+    @apply font-inter text-sm leading-5;
+  }
+
+  .destkop-caption {
+    @apply font-inter text-xs leading-4;
+  }
+
+  /* MOBILE FONTS */
+  .mobile-h1 {
+    @apply font-poppins font-bold text-2xl leading-8;
+  }
+
+  .mobile-h2 {
+    @apply font-poppins font-bold text-xl leading-7;
+  }
+  
+  .mobile-h3 {
+    @apply font-poppins font-bold text-base leading-6;
+  }
+
+  .mobile-h4 {
+    @apply font-poppins font-bold text-sm leading-5;
+  }
+
+  .mobile-lg {
+    @apply font-inter text-base leading-6;
+  }
+
+  .mobile-md {
+    @apply font-inter text-sm leading-5;
+  }
+
+  .mobile-caption {
+    @apply font-inter text-xs leading-4;
+  }
+
+  /* SPECIAL FONTS */
+  .text-article {
+    @apply font-inter font-medium text-base leading-8 tracking-[0.16px];
+  }
+
+  .text-nav {
+    @apply font-poppins font-medium text-base leading-6;
+  }
+}

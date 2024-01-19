@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="flex items-center gap-4 text-nav">
                     {NAV_LINKS.map((link) => {
                         return (
-                            <div key={link.key} className="flex items-center gap-[2px] p-2 hover:text-[#F2B124] hover:underline hover:font-semibold">
+                            <div key={link.key} className="flex items-center gap-[2px] p-2 text-nav hover:text-[#F2B124] hover:underline hover:font-semibold">
                                 <Link href={link.href}>
                                     {link.label}
                                 </Link>
