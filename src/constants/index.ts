@@ -99,3 +99,23 @@ export const NAV_LINKS = [
         label: 'Acara',
     }
 ]
+
+// Bread Crumbs
+export const CRUM_SECTIONS = [
+    {
+        key: 'home',
+        section: 'Home'
+    },
+    {
+        key: 'berita',
+        section: 'Berita'
+    },
+    {
+        key: 'bitcoin',
+        section: 'Bitcoin'
+    },
+    {
+        key: 'bitcoin-vs-saham-mana-yang-lebih-untung?',
+        section: 'Bitcoin VS Saham Mana yang Lebih Untung?'
+    }
+]
