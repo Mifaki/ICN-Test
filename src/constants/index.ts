@@ -147,3 +147,16 @@ export const NEWS_DATA = {
         }
     ]
 }
+
+// TOPICS
+export const NEWS_TOPICS = [
+    'Topics 1',
+    'Topics 2',
+    'Topics 3',
+    'Topics 4',
+    'Topics 5',
+    'Topics 6',
+    'Topics 7',
+    'Topics 8',
+    'Topics 9',
+] 

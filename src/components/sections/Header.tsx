@@ -50,14 +50,16 @@ const Header = ({
                     <div className="flex gap-2">
                         {socials.map((social) => {
                             return (
-                                <Button
-                                    type='button'
-                                    label={social.label}
-                                    color='Outline'
-                                    size='Small'
-                                    icon={social.icon}
-                                    onClick={() => handleButtonClick(social.label, social.socialUrl)}
-                                />
+                                <span key={social.key}>
+                                    <Button
+                                        type='button'
+                                        label={social.label}
+                                        color='Outline'
+                                        size='Small'
+                                        icon={social.icon}
+                                        onClick={() => handleButtonClick(social.label, social.socialUrl)}
+                                    />
+                                </span>
                             )
                         })}
                     </div>
