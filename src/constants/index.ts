@@ -119,3 +119,31 @@ export const CRUM_SECTIONS = [
         section: 'Bitcoin VS Saham Mana yang Lebih Untung?'
     }
 ]
+
+// Article
+export const NEWS_DATA = {
+    category: 'BITCOIN',
+    title: 'Bitcoin VS Saham, Mana Yang Lebih Untung?',
+    thumbnailUrl: '/news-thumbnail.jpg',
+    author: 'User',
+    postedAt: 'Rabu, 19 January 2021',
+    socials: [
+        {
+            key: 'facebook',
+            icon: '/facebook-icon.jpg',
+            label: 'Share',
+            socialUrl: 'https://www.facebook.com'
+        },
+        {
+            key: 'twitter',
+            icon: '/twitter-icon.jpg',
+            label: 'Share',
+            socialUrl: 'https://www.twitter.com'
+        },
+        {
+            key: 'copy',
+            icon: '/copy-icon.png',
+            label: 'Copy',
+        }
+    ]
+}
