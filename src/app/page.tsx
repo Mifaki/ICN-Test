@@ -6,8 +6,8 @@ import { CRUM_SECTIONS, NEWS_DATA } from "@/constants";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <div className="main-container my-9">
+    <main className="min-h-screen mt-[124px]">
+      <div className="main-container mb-9">
         <BreadCrumb sections={CRUM_SECTIONS} />
       </div>
       <Header
