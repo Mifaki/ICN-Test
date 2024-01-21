@@ -21,7 +21,7 @@ const NewsAside = (props: Props) => {
     }
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -42,8 +42,14 @@ const NewsAside = (props: Props) => {
             {data && data.map((newsItem: any) => {
               return (
                 <div key={newsItem.id}>
-                  <span className='destkop-caption px-2 py-1 text-[#43464D] bg-[#F8F8F8] rounded-full'>Teknologi</span>
-                  <p className='font-poppins text-sm font-semibold leading-5 my-2 cursor-pointer'>{newsItem.title.rendered}</p>
+                  <div className='flex items-center gap-1 flex-wrap mb-2'>
+                    {newsItem.tagNames.map((tag: string) => {
+                      return (
+                        <p className='destkop-caption w-fit px-2 py-1 text-[#43464D] bg-[#F8F8F8] rounded-full'>{tag}</p>
+                      )
+                    })}
+                  </div>
+                  <a href={newsItem.link} target='_blank' className='font-poppins text-sm font-semibold leading-5 my-2 cursor-pointer'>{newsItem.title.rendered}</a>
                   <p className='destkop-caption font-semibold text-[#A6B0C0] mb-4'>{newsItem.authorName} · {DateFormat(newsItem.modified_gmt)}</p>
                   <div className='h-[1px] w-full bg-[#F2F5F9]' />
                 </div>
