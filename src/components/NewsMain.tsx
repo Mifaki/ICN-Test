@@ -93,14 +93,16 @@ const NewsMain = () => {
             <div className="w-full h-[1px] bg-[#F2F5F9]" />
             <NewsTag tags={NEWS_TAGS} />
             <div className="w-full h-[1px] bg-[#F2F5F9]" />
-            <NewsAuhor
-                name={NEWS_DATA.author}
-                bio={NEWS_DATA.authorBio}
-                avatarUrl={NEWS_DATA.auhorAvatar}
-                linkedinUrl={NEWS_DATA.authorSocials.linkedinUrl}
-                twitterUrl={NEWS_DATA.authorSocials.twitterUrl}
-                emailUrl={NEWS_DATA.authorSocials.emailUrl}
-            />
+            <div className="hidden md:flex">
+                <NewsAuhor
+                    name={NEWS_DATA.author}
+                    bio={NEWS_DATA.authorBio}
+                    avatarUrl={NEWS_DATA.auhorAvatar}
+                    linkedinUrl={NEWS_DATA.authorSocials.linkedinUrl}
+                    twitterUrl={NEWS_DATA.authorSocials.twitterUrl}
+                    emailUrl={NEWS_DATA.authorSocials.emailUrl}
+                />
+            </div>
         </article>
     )
 }

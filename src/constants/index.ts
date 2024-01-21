@@ -127,6 +127,7 @@ export const NEWS_DATA = {
     thumbnailUrl: '/news-thumbnail.jpg',
     author: 'User',
     postedAt: 'Rabu, 19 January 2021',
+    readTime: '5 min',
     socials: [
         {
             key: 'facebook',
