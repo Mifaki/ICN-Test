@@ -145,7 +145,14 @@ export const NEWS_DATA = {
             icon: '/copy-icon.png',
             label: 'Copy',
         }
-    ]
+    ],
+    auhorAvatar: '/news-thumbnail.jpg',
+    authorBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    authorSocials: {
+        linkedinUrl: 'https://www.linkedin.com/',
+        twitterUrl: 'https://twitter.com/',
+        emailUrl: 'https://gmail.com/'
+    }
 }
 
 // TOPICS
@@ -160,3 +167,76 @@ export const NEWS_TOPICS = [
     'Topics 8',
     'Topics 9',
 ] 
+
+// Table
+export const TABLES_DATA = {
+    head: [
+        'Aset',
+        'Harga Beli (2016)',
+        'Harga Jual (2020)',
+        'Profit (Rp)',
+        'Profit (%)'
+    ],
+    body: [
+        {
+            image: '/bitcoin-logo.png',
+            buy: '12.974.831',
+            sell: '410.410.296',
+            profitNum: '397.435.465',
+            profitPercents: '3.063,13',
+        },
+        {
+            image: '/bca-logo.png',
+            buy: '16.200.000',
+            sell: '34.000.000',
+            profitNum: '17.800.000',
+            profitPercents: '109,88',
+        },
+        {
+            image: '/bitcoin-logo.png',
+            buy: '12.974.831',
+            sell: '410.410.296',
+            profitNum: '397.435.465',
+            profitPercents: '3.063,13',
+        },
+        {
+            image: '/bca-logo.png',
+            buy: '16.200.000',
+            sell: '34.000.000',
+            profitNum: '17.800.000',
+            profitPercents: '109,88',
+        },
+        {
+            image: '/bitcoin-logo.png',
+            buy: '12.974.831',
+            sell: '410.410.296',
+            profitNum: '397.435.465',
+            profitPercents: '3.063,13',
+        },
+    ],
+    caption: 'Perbandingan Keuntungan Bitcoin dan Saham'
+}
+
+// Tag
+export const NEWS_TAGS = [
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+    '#Bitcoin',
+]

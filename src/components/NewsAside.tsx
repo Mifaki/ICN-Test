@@ -26,9 +26,9 @@ const NewsAside = (props: Props) => {
   }, []);
 
   return (
-    <aside className='flex items-start gap-4 xl:gap-6 mb-[60px]'>
-      <div className='min-h-full w-[1px] bg-[#F2F5F9]' />
-      <div>
+    <aside className='relative flex items-start xl:gap-6 mb-[60px]'>
+      <div className='absolute top-0 bottom-0 w-[1px] bg-[#F2F5F9]' />
+      <div className='ml-4'>
         <div className='w-full h-fit p-4 xl:p-6 bg-[#F2F5F9] rounded-lg'>
           <h4 className='destkop-md font-bold mb-1'>This is A Heading Example Of the Leads Sticky</h4>
           <p className='destkop-sm text-[#A6B0C0] mb-4'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>

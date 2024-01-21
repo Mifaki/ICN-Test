@@ -33,8 +33,6 @@ export const getRelatedNews = async () => {
       };
     });
 
-    console.log(newsWithAuthorNames);
-
     return newsWithAuthorNames;
   } catch (error) {
     console.error(error);
