@@ -15,7 +15,7 @@ const NewsCard = ({
             <p className="destkop-md font-semibold text-[#2B4A86]">{title}</p>
             <p className="destkop-caption font-semibold text-[#9CADD3]">{author}</p>
         </div>
-        <img className="w-full sm:w-auto max-w-auto sm:max-w-[172px] sm:max h-auto" src={thumbnailUrl} alt={title} />
+        <img className="w-full sm:w-auto max-w-auto sm:max-w-[172px] sm:max h-auto rounded-t-sm md:rounded-r-sm" src={thumbnailUrl} alt={title} />
     </div>
   )
 }

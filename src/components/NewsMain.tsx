@@ -53,7 +53,7 @@ const NewsMain = () => {
             >
                 <>
                     <Quotes text="Dengan mekanisme tersebut di masa depan, harga Bitcoin akan akan melambung tinggi dan bagi para investor yang memulai investasi Bitcoin sejak dini sangat dimungkinkan untuk mendapatkan keuntungan besar dari Bitcoin yang sudah mereka miliki sejak harganya belum terlalu tinggi. Bitcoin sendiri tercatat pernah menyentuh harga tertingginya pada  933 juta Rupiah pada April 2021." author="John Doe" />
-                    <NewsCard title="Mengenal Whale Bitcoin yang Bikin Market Gonjang-Ganjing" author="Coinvestasi.com" thumbnailUrl="/news-thumbnail.jpg" />
+                    <NewsCard title="Mengenal Whale Bitcoin yang Bikin Market Gonjang-Ganjing" author="Coinvestasi.com" thumbnailUrl="/whale-bitcoin.jpg" />
                 </>
             </NewsContent>
             <NewsContent
@@ -67,7 +67,7 @@ const NewsMain = () => {
                 "
             >
                 <>
-                    <NewsCard title="6 Alasan Kenapa Kamu Harus Investasi Bitcoin Di 2021" author="Coinvestasi.com" thumbnailUrl="/news-thumbnail.jpg" />
+                    <NewsCard title="6 Alasan Kenapa Kamu Harus Investasi Bitcoin Di 2021" author="Coinvestasi.com" thumbnailUrl="/reason-bitcoin.jpg" />
                 </>
             </NewsContent>
             <NewsContent

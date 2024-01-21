@@ -1,4 +1,3 @@
-import Image from "next/image"
 import NewsTitle from "../NewsTitle"
 
 type Props = {
@@ -31,7 +30,7 @@ const Header = ({
                     <NewsTitle category={category} title={title} author={author} date={date} socials={socials} />
                 </div>
             </div>
-            <Image className="absolute right-[5%] w-[40%]" src={thumbnail} alt={title} width={110} height={48} />
+            <img className="absolute right-[5%] w-[40%]" src={thumbnail} alt={title} width={110} height={48} />
         </section>
     )
 }
