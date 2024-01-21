@@ -6,9 +6,7 @@ import { getRelatedNews } from '@/app/action'
 import { DateFormat } from '@/util/Dateformat'
 import { NEWS_TOPICS } from '@/constants'
 
-type Props = {}
-
-const NewsAside = (props: Props) => {
+const NewsAside = () => {
 
   const [data, setData] = useState<any[]>([]);
 
@@ -17,7 +15,7 @@ const NewsAside = (props: Props) => {
       const result = await getRelatedNews();
       setData(result);
     } catch (error) {
-      console.error(error);
+      console.error(error); 
     }
   };
 
@@ -43,9 +41,9 @@ const NewsAside = (props: Props) => {
               return (
                 <div key={newsItem.id}>
                   <div className='flex items-center gap-1 flex-wrap mb-2'>
-                    {newsItem.tagNames.map((tag: string) => {
+                    {newsItem.tagNames.map((tag: string, index: number) => {
                       return (
-                        <p className='destkop-caption w-fit px-2 py-1 text-[#43464D] bg-[#F8F8F8] rounded-full'>{tag}</p>
+                        <p key={index} className='destkop-caption w-fit px-2 py-1 text-[#43464D] bg-[#F8F8F8] rounded-full'>{tag}</p>
                       )
                     })}
                   </div>

@@ -57,6 +57,9 @@ export const getRelatedNews = async () => {
       };
     });
 
+    console.log(newsWithTags);
+    
+
     return newsWithTags;
   } catch (error) {
     console.error(error);

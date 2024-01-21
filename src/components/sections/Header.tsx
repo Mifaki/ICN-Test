@@ -22,7 +22,6 @@ const Header = ({
     date,
     socials
 }: Props) => {
-
     return (
         <section className="flex items-center relative">
             <div className="w-[60%] h-[492px] flex flex-col justify-center items-center bg-gradient-to-r from-[#F2F5F9] via-[#F2F1FD] to-[#FFF1FB] shadow-sm">

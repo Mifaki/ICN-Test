@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       {/* Mobile Layout */}
       <div className="block md:hidden relative">
-        <img src={NEWS_DATA.thumbnailUrl} alt={NEWS_DATA.title} className="w-full max-h-[356px] object-center" />
+        <img src={NEWS_DATA.thumbnailUrl} alt={NEWS_DATA.title} className="w-full max-h-[356px] object-cover" />
         <div className="absolute top-[80%] flex flex-col gap-6 max-w-[calc(100vw-32px)] sm:max-w-[calc(100vw-40px)] left-1/2 transform -translate-x-1/2">
           <div className="flex flex-col gap-6 py-6 px-4 bg-white rounded-md">
             <div className="flex flex-col gap-3">

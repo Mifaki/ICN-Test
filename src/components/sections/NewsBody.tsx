@@ -1,4 +1,3 @@
-import React from 'react'
 import NewsAside from '../NewsAside'
 import NewsMain from '../NewsMain'
 
