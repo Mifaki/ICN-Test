@@ -2,7 +2,7 @@ import { NEWS_DATA, NEWS_TAGS, TABLES_DATA } from "@/constants"
 import NewsCard from "./NewsCard"
 import NewsContent from "./NewsContent"
 import Quotes from "./Quotes"
-import Table from "./Table"
+import Table from "../shared/Table"
 import NewsTag from "./NewsTag"
 import NewsAuhor from "./NewsAuhor"
 

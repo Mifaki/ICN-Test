@@ -1,7 +1,7 @@
-import BreadCrumb from "@/components/BreadCrumb";
-import NewsAuhor from "@/components/NewsAuhor";
-import NewsTitle from "@/components/NewsTitle";
-import ReadTime from "@/components/ReadTime";
+import BreadCrumb from "@/components/shared/BreadCrumb";
+import NewsAuhor from "@/components/News/NewsAuhor";
+import NewsTitle from "@/components/News/NewsTitle";
+import ReadTime from "@/components/News/ReadTime";
 import Header from "@/components/sections/Header";
 import NewsBody from "@/components/sections/NewsBody";
 import { CRUM_SECTIONS, NEWS_DATA } from "@/constants";

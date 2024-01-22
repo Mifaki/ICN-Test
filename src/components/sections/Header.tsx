@@ -1,4 +1,4 @@
-import NewsTitle from "../NewsTitle"
+import NewsTitle from "../News/NewsTitle"
 
 type Props = {
     category: string,

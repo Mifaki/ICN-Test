@@ -1,5 +1,5 @@
-import NewsAside from '../NewsAside'
-import NewsMain from '../NewsMain'
+import NewsAside from '../News/NewsAside'
+import NewsMain from '../News/NewsMain'
 
 
 const NewsBody = () => {

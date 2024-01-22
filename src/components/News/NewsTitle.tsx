@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Button from "./Button"
-import Notification from "./Notification"
+import Button from "../shared/Button"
+import Notification from "../shared/Notification"
 
 type NewsTitleProps = {
     category: string,

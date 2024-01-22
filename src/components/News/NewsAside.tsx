@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import Button from './Button'
+import Button from '../shared/Button'
 import { getRelatedNews } from '@/app/action'
 import { DateFormat } from '@/util/Dateformat'
 import { NEWS_TOPICS } from '@/constants'
