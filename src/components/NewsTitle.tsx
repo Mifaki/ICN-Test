@@ -39,7 +39,7 @@ const NewsTitle = ({
     return (
         <>
             <div className="w-full">
-                <p className="hidden md:flex font-inter text-base leading-6 text-[#2792DF]">{category}</p>
+                <p className="hidden sm:flex font-inter text-base leading-6 text-[#2792DF]">{category}</p>
                 <h1 className="text-2xl md:text-[32px] leading-8 md:leading-[44px] font-bold  my-2">{title}</h1>
                 <p className="mobile-md md:destkop-sm text-[#A6B0C0] mb-4">{author} · {date}</p>
                 <div className="flex gap-2">

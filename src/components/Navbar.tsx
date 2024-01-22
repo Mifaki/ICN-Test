@@ -10,6 +10,7 @@ const Navbar = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsopen] = useState<boolean>(false);
+    const [isDropdown, setIsDropdown] = useState<string>('');
 
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 0);
@@ -19,6 +20,9 @@ const Navbar = () => {
         setIsopen(!isOpen);
     }
 
+    const handleDropdown = (linkKey: string) => {
+        setIsDropdown(isDropdown === linkKey ? "" : linkKey);
+    };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -46,27 +50,52 @@ const Navbar = () => {
                 {/* DESTKOP NAVBAR */}
                 <>
                     <ul className="hidden xl:flex items-center gap-4 text-nav">
-                        {NAV_LINKS.map((link) => {
+                        {NAV_LINKS.map((link, index) => {
                             return (
-                                <div key={link.key} className="flex items-center gap-[2px] p-2 text-nav hover:text-[#F2B124] hover:underline hover:font-semibold">
-                                    <Link href={link.href}>
-                                        {link.label}
-                                    </Link>
-                                    {link.children && (
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 20 20"
-                                            fill="none"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                                d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z"
-                                                fill="#43464D"
-                                            />
-                                        </svg>
+
+                                <div
+                                    key={link.key} className="relative flex items-center gap-[2px] p-2 text-nav cursor-pointer"
+                                    onClick={() => handleDropdown(link.key)}
+                                >
+                                    {link.children ? (
+                                        <>
+                                            <p className="hover:text-[#F2B124] hover:underline hover:font-semibold">
+                                                {link.label}
+                                            </p>
+                                            {link.children && (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 20 20"
+                                                    className={`${isDropdown === link.key && link.children ? 'rotate-180' : ''} hover:text-[#F2B124] hover:underline hover:font-semibold ease-in-out duration-300`}
+                                                >
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z"
+                                                        fill="#43464D"
+                                                    />
+                                                </svg>
+                                            )}
+                                            {isDropdown === link.key && link.children && (
+                                                <div
+                                                    className="bg-[#1E386B] p-6 text-white absolute top-10 w-fit left-1/2 transform -translate-x-1/2 rounded-md"
+                                                >
+                                                    <ul className="flex flex-col gap-4 text-center">
+                                                        {link.children.map((child) => (
+                                                            <li key={child.key}>
+                                                                <Link className="block w-max hover:text-[#ecde65] hover:underline" href={child.href}>{child.label}</Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                        </>
+                                    ) : (
+                                        <Link className="hover:text-[#F2B124] hover:underline hover:font-semibold" href={link.href}>
+                                            {link.label}
+                                        </Link>
                                     )}
                                 </div>
                             )
@@ -93,31 +122,53 @@ const Navbar = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
-                        <ul className="flex flex-col items-start gap-4 text-nav cursor-pointer">
-                            {NAV_LINKS.map((link) => {
-                                return (
-                                    <div key={link.key} className="flex items-center justify-between w-full p-2 hover:text-[#F2B124] hover:underline hover:font-semibold">
-                                        <Link href={link.href}>
-                                            {link.label}
-                                        </Link>
-                                        {link.children && (
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 20 20"
-                                                fill="#ffffff"
-                                            >
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z"
-                                                />
-                                            </svg>
+                        <ul className="flex flex-col items-start gap-4 text-nav cursor-pointer ease-in-out duration-300">
+                            {NAV_LINKS.map((link) => (
+                                <div key={link.key} className="flex flex-col w-full">
+                                    <div
+                                        className="flex items-center justify-between w-full p-2 hover:text-[#F2B124] hover:underline hover:font-semibold"
+                                        onClick={() => handleDropdown(link.key)}
+                                    >
+                                        {link.children ? (
+                                            <>
+                                                <p className="hover:text-[#F2B124] hover:underline hover:font-semibold">
+                                                    {link.label}
+                                                </p>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 20 20"
+                                                    fill="#ffffff"
+                                                    className={`${isDropdown === link.key && link.children ? 'rotate-180' : ''} hover:text-[#F2B124] hover:underline hover:font-semibold ease-in-out duration-300`}
+                                                >
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z"
+                                                    />
+                                                </svg>
+                                            </>
+
+                                        ) : (
+                                            <Link className="hover:text-[#F2B124] hover:underline hover:font-semibold" href={link.href}>
+                                                {link.label}
+                                            </Link>
                                         )}
                                     </div>
-                                )
-                            })}
+                                    {isDropdown === link.key && link.children && (
+                                        <ul className="flex flex-col gap-4 pl-6 text-center">
+                                            {link.children.map((child) => (
+                                                <li key={child.key}>
+                                                    <Link className="block w-max hover:text-[#ecde65] hover:underline" href={child.href}>
+                                                        {child.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            ))}
                         </ul>
                     </div>
                 )}
